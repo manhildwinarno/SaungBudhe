@@ -20,13 +20,13 @@ export default function Navbar() {
             priority
           />
           <div className="flex justify-center items-center gap-7">
-            <div className="hidden lg:flex gap-12 text-lg text-white">
+            <div className="hidden lg:flex gap-12 text-lg font-medium text-white">
               <a href="home">Home</a>
               <a href="About">About</a>
               <a href="Menu">Menu</a>
               <a href="Contact">Contact</a>
             </div>
-            <Button className={"hidden lg:flex bg-red-800 p-5"}>
+            <Button className={"hidden lg:flex bg-orange-600 p-5"}>
               Order Now
             </Button>
 
