@@ -1,8 +1,9 @@
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <>
+    <section>
       <div className="w-full min-h-[586px] md:min-h-[695px] bg-red-800 flex justify-start items-start lg:items-center px-7 py-30 lg:p-20">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-3 lg:max-w-xl">
@@ -16,13 +17,15 @@ export default function Hero() {
               hingga terakhir.
             </p>
           </div>
-          <Button
-            className={"bg-orange-600 p-5 lg:w-32 rounded-2xl lg:text-lg"}
-          >
-            Menu
-          </Button>
+          <Link href="#menu">
+            <Button
+              className={"bg-orange-600 p-5 lg:w-32 rounded-2xl lg:text-lg"}
+            >
+              Menu
+            </Button>
+          </Link>
         </div>
       </div>
-    </>
+    </section>
   );
 }

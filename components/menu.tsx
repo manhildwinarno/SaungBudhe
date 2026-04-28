@@ -16,12 +16,11 @@ import {
 } from "./ui/carousel";
 
 import { menuItems, MenuItemsType } from "@/public/menuItems";
-import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 
 export default function Menu() {
   return (
-    <>
+    <section id="menu">
       <div className="w-full min-h-[586px] md:min-h-[655px] bg-red-800 flex justify-start items-start lg:items-center px-7 py-30 lg:p-20">
         <div className="flex flex-col gap-5 w-full">
           <h1 className="font-bold text-[40px] text-white">
@@ -39,22 +38,31 @@ export default function Menu() {
                     className="pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3"
                   >
                     <div className="p-1">
-                      <Card className="relative mx-auto w-full max-w-lg pt-0">
-                        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+                      <Card className="relative mx-auto w-full max-w-lg pt-0 bg-orange-600">
+                        <div className="absolute inset-0 z-30 aspect-video" />
                         <img
-                          src="https://avatar.vercel.sh/shadcn1"
+                          src={item.image}
                           alt={item.name}
-                          className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+                          className="relative z-20 aspect-video w-full object-cover object-[center_66%]"
                         />
                         <CardHeader>
                           <CardAction>
-                            <Badge variant="secondary">{item.price}</Badge>
+                            <Badge
+                              className="bg-red-950 text-sm text-white p-3"
+                              variant="secondary"
+                            >
+                              {item.price}
+                            </Badge>
                           </CardAction>
-                          <CardTitle>{item.name}</CardTitle>
-                          <CardDescription>{item.description}</CardDescription>
+                          <CardTitle className="text-red-950 text-xl font-bold">
+                            {item.name}
+                          </CardTitle>
+                          <CardDescription className="text-white text-sm">
+                            {item.description}
+                          </CardDescription>
                         </CardHeader>
-                        <CardFooter>
-                          <Button className="w-full">Buy Now</Button>
+                        <CardFooter className="flex justify-center items-center bg-red-950 text-white p-4 border-none cursor-pointer">
+                          Buy Now
                         </CardFooter>
                       </Card>
                     </div>
@@ -67,6 +75,6 @@ export default function Menu() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

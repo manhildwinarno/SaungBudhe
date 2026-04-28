@@ -9,35 +9,35 @@ export interface MenuItemsType {
 export const menuItems: MenuItemsType[] = [
   {
     id: 1,
-    name: "Hotplate Keju Gachoor",
+    name: "Mie Hotplate Gachoor Sosis",
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
-    price: "Rp 25.000",
-    image: "https://avatar.vercel.sh/shadcn1",
+    price: "Rp 15.000",
+    image: "menu/Mie Gachoor Sosis.jpeg",
   },
   {
     id: 2,
-    name: "Hotplate Keju Gachoor",
+    name: "Mie Hotplate Gachoor Bakso",
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
-    price: "Rp 25.000",
-    image: "https://avatar.vercel.sh/shadcn2",
+    price: "Rp 14.000",
+    image: "menu/Mie Gachoor Bakso.jpeg",
   },
   {
     id: 3,
-    name: "Hotplate Keju Gachoor",
+    name: "Mie Hotplate Gachoor Pangsit Basah",
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
-    price: "Rp 25.000",
-    image: "https://avatar.vercel.sh/shadcn3",
+    price: "Rp 13.000",
+    image: "menu/Mie Gachoor Pangsit Basah.jpeg",
   },
   {
     id: 4,
-    name: "Hotplate Keju Gachoor",
+    name: "Mie Hotplate Gachoor Keju",
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
-    price: "Rp 25.000",
-    image: "https://avatar.vercel.sh/shadcn4",
+    price: "Rp 15.000",
+    image: "menu/Mie Gachoor Keju.jpeg",
   },
   {
     id: 5,
@@ -45,6 +45,6 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 25.000",
-    image: "https://avatar.vercel.sh/shadcn5",
+    image: "menu/Mie Gachoor Bakso.jpeg",
   },
 ];

@@ -31,6 +31,7 @@ export default function RootLayout({
         montserrat.variable,
         "font-sans",
         inter.variable,
+        "scroll-smooth",
       )}
     >
       <body className="min-h-full flex flex-col">
