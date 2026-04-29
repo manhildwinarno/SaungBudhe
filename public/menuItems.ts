@@ -13,7 +13,7 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 15.000",
-    image: "menu/Mie Gachoor Sosis.jpeg",
+    image: "/menu/Mie Gachoor Sosis.jpeg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 14.000",
-    image: "menu/Mie Gachoor Bakso.jpeg",
+    image: "/menu/Mie Gachoor Bakso.jpeg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 13.000",
-    image: "menu/Mie Gachoor Pangsit Basah.jpeg",
+    image: "/menu/Mie Gachoor Pangsit Basah.jpeg",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 15.000",
-    image: "menu/Mie Gachoor Keju.jpeg",
+    image: "/menu/Mie Gachoor Keju.jpeg",
   },
   {
     id: 5,
@@ -45,6 +45,6 @@ export const menuItems: MenuItemsType[] = [
     description:
       "Mie kuah tipis gurih berpadu dengan lelehan keju premium yang lumer di atas hotplate panas.",
     price: "Rp 25.000",
-    image: "menu/Mie Gachoor Bakso.jpeg",
+    image: "/menu/Mie Gachoor Bakso.jpeg",
   },
 ];
