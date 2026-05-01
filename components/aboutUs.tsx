@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section>
-      <div className="flex justify-center items-center bg-red-800 w-full min-h-[500px]">
+    <section id="about" className="bg-linear-to-b from-red-800 to-red-900">
+      <div className="flex justify-center items-center w-full min-h-[500px]">
         <Image
           src="/about mie hotplate gachoor.png"
           alt="Mie Hotplate Gachoor"

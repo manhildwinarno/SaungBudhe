@@ -21,10 +21,10 @@ export default function Navbar() {
           />
           <div className="flex justify-center items-center gap-7">
             <div className="hidden lg:flex gap-12 text-lg font-medium text-white">
-              <a href="home">Home</a>
-              <a href="About">About</a>
-              <a href="Menu">Menu</a>
-              <a href="Contact">Contact</a>
+              <Link href="/">Home</Link>
+              <Link href="/#menu">Menu</Link>
+              <Link href="/#about">About</Link>
+              <Link href="/#contact">Contact</Link>
             </div>
             <Button className={"hidden lg:flex bg-orange-600 p-5"}>
               Order Now
@@ -41,18 +41,18 @@ export default function Navbar() {
       </nav>
       {isOpen ? (
         <div className="fixed top-[76px] left-0 w-full h-[calc(100vh-76px)] z-50 lg:hidden bg-red-900 flex flex-col justify-center items-center gap-6 text-white">
-          <a href="home" className="mx-auto">
+          <Link href="/" className="mx-auto">
             Home
-          </a>
-          <a href="About" className="mx-auto">
-            About
-          </a>
-          <a href="Menu" className="mx-auto">
+          </Link>
+          <Link href="/#menu" className="mx-auto">
             Menu
-          </a>
-          <a href="Contact" className="mx-auto">
+          </Link>
+          <Link href="/#about" className="mx-auto">
+            About
+          </Link>
+          <Link href="/#contact" className="mx-auto">
             Contact
-          </a>
+          </Link>
         </div>
       ) : (
         <></>

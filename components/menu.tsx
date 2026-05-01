@@ -14,8 +14,8 @@ import Image from "next/image";
 
 export default function Menu() {
   return (
-    <section id="menu">
-      <div className="w-full min-h-[586px] md:min-h-[655px] bg-red-800 flex justify-start items-start lg:items-center px-4 py-12 sm:px-7 sm:py-16 lg:p-20">
+    <section id="menu" className="bg-linear-to-b from-red-900 to-red-800">
+      <div className="w-full min-h-[586px] md:min-h-[655px] flex justify-start items-start lg:items-center px-4 py-12 sm:px-7 sm:py-16 lg:p-20">
         <div className="flex flex-col gap-6 w-full">
           <h1 className="font-bold text-3xl sm:text-[40px] text-white">
             Top <span className="text-orange-600">Gachoor</span> Menu

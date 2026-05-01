@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import Menu from "@/components/menu";
 import AboutUs from "@/components/aboutUs";
+import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Menu />
       <AboutUs />
+      <Contact />
       <Footer />
     </>
   );

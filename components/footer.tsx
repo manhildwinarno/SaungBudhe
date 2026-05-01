@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
@@ -18,15 +19,18 @@ export default function Footer() {
       </div>
       <div className="hidden lg:flex flex-col justify-center lg:self-start font-medium gap-3">
         <p>PAGE</p>
-        <a className="text-gray-300" href="">
+        <Link href="/" className="text-gray-300">
           Home
-        </a>
-        <a className="text-gray-300" href="">
+        </Link>
+        <Link href="/#menu" className="text-gray-300">
           Menu
-        </a>
-        <a className="text-gray-300" href="">
+        </Link>
+        <Link href="/#about" className="text-gray-300">
           About
-        </a>
+        </Link>
+        <Link href="/#contact" className="text-gray-300">
+          Contact
+        </Link>
       </div>
       <div className="hidden lg:flex flex-col justify-center self-start gap-3">
         <p>SUPPORT</p>
@@ -47,14 +51,14 @@ export default function Footer() {
         </div>
         <p>Ikuti keseharian dan promo kami!</p>
       </div>
-      <div className="flex flex-col justify-center items-center lg:self-start gap-2">
-        <div className="hidden lg:flex flex-col justify-center self-start gap-2">
+      <div className="flex flex-col justify-center items-center lg:self-start lg:text-right gap-2">
+        <div className="hidden lg:flex flex-col justify-center self-end gap-2">
           <p>OpenHours</p>
           <p>Senin-Kamis, Sabtu-Ahad</p>
           <p>09:00-23:00 WIB</p>
           <p>Tutup Hari Jum'at</p>
         </div>
-        <p className="block text-gray-300 text-center lg:text-left">
+        <p className="block text-gray-300 text-center lg:text-right">
           &copy; 2026 Mie Gachoor Saung Budhe. Didesain oleh Manhillih
         </p>
       </div>
