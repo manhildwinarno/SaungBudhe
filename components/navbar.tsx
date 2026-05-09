@@ -13,7 +13,7 @@ export default function Navbar() {
       <nav className="sticky top-0 z-10 w-full p-3 bg-red-950">
         <div className="flex justify-between items-center">
           <Image
-            src="/Logo_gachoor.png"
+            src="/logo_gachoor.png"
             alt="Mie Gachoor logo"
             width={60}
             height={60}

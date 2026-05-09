@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="w-full bg-red-950 min-h-[185px] flex flex-col lg:flex-row justify-center lg:justify-around items-center text-white p-7 gap-3">
       <div className="hidden lg:flex flex-col justify-center max-w-52">
         <Image
-          src="/Logo_gachoor.png"
+          src="/logo_gachoor.png"
           alt="Logo Mie Gachoor"
           width={80}
           height={80}

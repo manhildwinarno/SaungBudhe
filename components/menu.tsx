@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
-import { menuItems, MenuItemsType } from "@/public/menuItems";
+import { menuItems, MenuItemsType } from "@/lib/menuItems";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
 
