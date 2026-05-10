@@ -1,13 +1,29 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { useLenis } from "lenis/react";
 
 export default function Footer() {
+  const lenis = useLenis();
+
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    target: string,
+  ) => {
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(target);
+    } else {
+      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+    }
+    window.history.pushState(null, "", target);
+  };
   return (
     <footer className="w-full bg-red-950 min-h-[185px] flex flex-col lg:flex-row justify-center lg:justify-around items-center text-white p-7 gap-3">
       <div className="hidden lg:flex flex-col justify-center max-w-52">
         <Image
-          src="/logo_gachoor.png"
+          src="/logo-gachoor.webp"
           alt="Logo Mie Gachoor"
           width={80}
           height={80}
@@ -19,26 +35,33 @@ export default function Footer() {
       </div>
       <div className="hidden lg:flex flex-col justify-center lg:self-start font-medium gap-3">
         <p>PAGE</p>
-        <Link href="/" className="text-gray-300">
+        <a
+          href="/"
+          onClick={(e) => handleScroll(e, "#home")}
+          className="text-gray-300"
+        >
           Home
-        </Link>
-        <Link href="/#menu" className="text-gray-300">
-          Menu
-        </Link>
-        <Link href="/#about" className="text-gray-300">
-          About
-        </Link>
-        <Link href="/#contact" className="text-gray-300">
-          Contact
-        </Link>
-      </div>
-      <div className="hidden lg:flex flex-col justify-center self-start gap-3">
-        <p>SUPPORT</p>
-        <a className="text-gray-300" href="">
-          Privacy Policy
         </a>
-        <a className="text-gray-300" href="">
-          Terms of Use
+        <a
+          href="/#menu"
+          onClick={(e) => handleScroll(e, "#menu")}
+          className="text-gray-300"
+        >
+          Menu
+        </a>
+        <a
+          href="/#about"
+          onClick={(e) => handleScroll(e, "#about")}
+          className="text-gray-300"
+        >
+          About
+        </a>
+        <a
+          href="/#contact"
+          onClick={(e) => handleScroll(e, "#contact")}
+          className="text-gray-300"
+        >
+          Contact
         </a>
       </div>
       <div className="flex flex-col justify-center items-center lg:items-start lg:self-start gap-2">
