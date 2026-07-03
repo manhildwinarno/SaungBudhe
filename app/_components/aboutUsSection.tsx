@@ -1,4 +1,4 @@
-import MotionWrapper from "./motionWrapper";
+import MotionWrapper from "../../components/provider/motionWrapper";
 
 interface DetailsType {
   title: string;
@@ -25,7 +25,7 @@ const details: DetailsType[] = [
   },
 ];
 
-export default function AboutUs() {
+export default function AboutUsSection() {
   return (
     <section
       id="about"

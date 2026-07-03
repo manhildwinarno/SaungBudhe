@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
-import MotionWrapper from "./motionWrapper";
+import MotionWrapper from "../../components/provider/motionWrapper";
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Mie+Hotplate+Gachor+Make+Depok";
@@ -31,7 +31,7 @@ const contactInfo = [
   },
 ];
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section id="contact" className="bg-linear-to-b from-red-900 to-red-950">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
@@ -62,7 +62,7 @@ export default function Contact() {
               </h2>
               <div className="relative w-16 h-16 shrink-0">
                 <Image
-                  src="/Logo_gachoor.png"
+                  src="/logo-gachoor.webp"
                   alt="Gachoor logo"
                   fill
                   className="object-contain"

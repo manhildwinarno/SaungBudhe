@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/navbar";
-import SmoothScroll from "@/components/smoothScroll";
+import Navbar from "@/components/layout/navbar";
+import SmoothScroll from "@/components/provider/smoothScroll";
 import "./globals.css";
 
 const montserrat = Montserrat({

@@ -1,4 +1,9 @@
-import { Card, CardDescription, CardFooter, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardTitle,
+} from "../../components/ui/card";
 
 import {
   Carousel,
@@ -6,14 +11,14 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
-
+} from "../../components/ui/carousel";
+import BuyNowButton from "../../components/ui/buyNowButton";
 import { menuItems, MenuItemsType } from "@/lib/menuItems";
-import { Badge } from "./ui/badge";
+import { Badge } from "../../components/ui/badge";
 import Image from "next/image";
-import MotionWrapper from "./motionWrapper";
+import MotionWrapper from "../../components/provider/motionWrapper";
 
-export default function Menu() {
+export default function MenuSection() {
   return (
     <section id="menu" className="bg-linear-to-b from-red-900 to-red-800">
       <div className="w-full min-h-146.5 md:min-h-163.75 flex justify-start items-start lg:items-center px-4 py-12 sm:px-7 sm:py-16 lg:p-20">
@@ -58,9 +63,10 @@ export default function Menu() {
                       </div>
 
                       <CardFooter className="p-0 mt-auto border-none">
-                        <button className="w-full bg-red-950 hover:bg-red-900 active:bg-red-800 transition-colors text-white font-semibold text-sm py-3 cursor-pointer">
-                          Buy Now
-                        </button>
+                        <BuyNowButton
+                          itemName={item.name}
+                          className="w-full bg-red-950 hover:bg-red-900 active:bg-red-800 transition-colors text-white font-semibold text-sm py-3 cursor-pointer rounded-none border-none"
+                        />
                       </CardFooter>
                     </Card>
                   </CarouselItem>

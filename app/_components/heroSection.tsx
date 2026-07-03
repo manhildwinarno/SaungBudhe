@@ -1,11 +1,11 @@
 "use client";
 
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import Image from "next/image";
 import { useLenis } from "lenis/react";
-import MotionWrapper from "./motionWrapper";
+import MotionWrapper from "../../components/provider/motionWrapper";
 
-export default function Hero() {
+export default function HeroSection() {
   const lenis = useLenis();
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {

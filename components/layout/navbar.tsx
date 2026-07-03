@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "./ui/button";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { useLenis } from "lenis/react";
+import BuyNowButton from "../ui/buyNowButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,13 +50,7 @@ export default function Navbar() {
                 Contact
               </a>
             </div>
-            <Button
-              className={
-                "hidden lg:flex bg-orange-600 text-xs font-semibold p-5"
-              }
-            >
-              Order Now
-            </Button>
+            <BuyNowButton className="hidden lg:flex bg-orange-600 text-xs font-semibold p-5" />
 
             <button
               className="lg:hidden text-white"
