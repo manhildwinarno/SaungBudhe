@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/navbar";
 import SmoothScroll from "@/components/provider/smoothScroll";
 import "./globals.css";
+import Footer from "@/components/layout/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>
