@@ -3,21 +3,31 @@
 import Image from "next/image";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { useLenis } from "lenis/react";
+import { headerData } from "@/lib/data";
+import NavLink from "@/components/ui/navLink";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Footer() {
   const lenis = useLenis();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
     target: string,
   ) => {
     e.preventDefault();
-    if (lenis) {
-      lenis.scrollTo(target);
+    if (pathname === "/") {
+      if (lenis) {
+        lenis.scrollTo(target);
+      } else {
+        document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+      }
+      window.history.pushState(null, "", target);
     } else {
-      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+      sessionStorage.setItem("scrollTarget", target);
+      router.push("/", { scroll: false });
     }
-    window.history.pushState(null, "", target);
   };
   return (
     <footer className="w-full bg-red-950 min-h-46.25 flex flex-col lg:flex-row justify-center lg:justify-around items-center text-white p-7 gap-3">
@@ -35,34 +45,15 @@ export default function Footer() {
       </div>
       <div className="hidden lg:flex flex-col justify-center lg:self-start font-medium gap-3">
         <p>PAGE</p>
-        <a
-          href="/"
-          onClick={(e) => handleScroll(e, "#home")}
-          className="text-gray-300"
-        >
-          Home
-        </a>
-        <a
-          href="/#menu"
-          onClick={(e) => handleScroll(e, "#menu")}
-          className="text-gray-300"
-        >
-          Menu
-        </a>
-        <a
-          href="/#about"
-          onClick={(e) => handleScroll(e, "#about")}
-          className="text-gray-300"
-        >
-          About
-        </a>
-        <a
-          href="/#contact"
-          onClick={(e) => handleScroll(e, "#contact")}
-          className="text-gray-300"
-        >
-          Contact
-        </a>
+        {headerData?.map((link) => (
+          <NavLink
+            key={link?.title}
+            href={link?.href}
+            title={link?.title}
+            classname="text-gray-300"
+            onHashClick={handleScroll}
+          />
+        ))}
       </div>
       <div className="flex flex-col justify-center items-center lg:items-start lg:self-start gap-2">
         <p>Connect with us!</p>
