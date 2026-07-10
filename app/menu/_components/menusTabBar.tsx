@@ -1,13 +1,19 @@
-import { categoriesData } from "@/lib/data";
+import { menuType } from "@/lib/data";
 
-export default function MenusTabBar() {
+interface Props {
+  selectedTab: string;
+  onTabSelect: (tab: string) => void;
+}
+
+export default function MenusTabBar({ selectedTab, onTabSelect }: Props) {
   return (
     <>
-      <div className="flex justify-center items-center gap-2 md:gap-4 flex-wrap md:flex-nowrap">
-        {categoriesData?.map((item) => (
+      <div className="flex justify-center items-center gap-2 md:gap-4 flex-wrap">
+        {menuType?.map((item) => (
           <button
             key={item?.title}
-            className="bg-orange-600 rounded-full px-4 py-2 md:min-w-48 text-white font-semibold text-sm hover:bg-red-950"
+            onClick={() => onTabSelect(item?.title)}
+            className={`rounded-full px-6 py-2 text-white font-semibold text-base hover:bg-red-950 transition-colors duration-300 ${selectedTab === item?.title ? "bg-red-950" : "bg-orange-600"}`}
           >
             {item?.title}
           </button>

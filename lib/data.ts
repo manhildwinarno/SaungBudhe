@@ -5,11 +5,12 @@ export const headerData = [
   { title: "Contact Us", href: "/#contact" },
 ];
 
-export const categoriesData = [
-  { title: "Mie Gachoor", href: "mie-gachorr" },
-  { title: "Ayam", href: "ayam" },
-  { title: "Sop", href: "sop" },
-  { title: "Jepang", href: "jepang" },
-  { title: "Snack", href: "snack" },
-  { title: "Minuman", href: "minuman" },
+export const menuType = [
+  { title: "All", value: "all" },
+  { title: "Mie Gachoor", value: "mie-gachorr" },
+  { title: "Ayam", value: "ayam" },
+  { title: "Sop", value: "sop" },
+  { title: "Jepang", value: "jepang" },
+  { title: "Snack", value: "snack" },
+  { title: "Minuman", value: "minuman" },
 ];
