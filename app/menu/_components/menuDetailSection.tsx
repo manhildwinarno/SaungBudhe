@@ -18,7 +18,10 @@ export default function MenuDetailSection() {
       item?.name.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
-  console.log(filteredMenus);
+  const handleSearchQuery = (value: string) => {
+    setSearchQuery(value);
+    setSelectedTab("All");
+  };
 
   return (
     <>
@@ -30,7 +33,7 @@ export default function MenuDetailSection() {
           <div className="flex justify-center p-6">
             <MenuSearchBar
               searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
+              handleSearchQuery={handleSearchQuery}
             />
           </div>
           <div className="flex justify-center mt-7">
