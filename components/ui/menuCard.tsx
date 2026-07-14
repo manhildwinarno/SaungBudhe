@@ -6,7 +6,7 @@ import {
 } from "../../components/ui/card";
 import DetailButton from "../../components/ui/detailButton";
 import Image from "next/image";
-import { Badge } from "../../components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { MenuItemsType } from "@/lib/menuItems";
 
 export default function MenuCard({
@@ -51,7 +51,7 @@ export default function MenuCard({
       <CardFooter className="p-0 mt-auto border-none">
         <DetailButton
           id={id}
-          className="w-full bg-red-950 hover:bg-red-900 active:bg-red-800 transition-colors text-white font-semibold text-sm py-3 cursor-pointer rounded-none border-none"
+          className="w-full bg-red-950 hover:bg-red-900 active:bg-red-800 transition-colors duration-300 text-white font-semibold text-sm py-3 cursor-pointer rounded-none border-none"
         />
       </CardFooter>
     </Card>

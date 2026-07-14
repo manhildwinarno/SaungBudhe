@@ -1,11 +1,12 @@
 "use client";
 
-import MenusTabBar from "./menusTabBar";
-import MenuSearchBar from "./menuSearchBar";
 import { useState } from "react";
 import { menuType } from "@/lib/data";
 import { menuItems, MenuItemsType } from "@/lib/menuItems";
+import MenusTabBar from "./menusTabBar";
+import MenuSearchBar from "./menuSearchBar";
 import MenuCard from "@/components/ui/menuCard";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 export default function MenuDetailSection() {
   const [selectedTab, setSelectedTab] = useState<string>(
@@ -42,23 +43,28 @@ export default function MenuDetailSection() {
               onTabSelect={setSelectedTab}
             />
           </div>
-          <div className="flex flex-col md:grid md:grid-cols-3 gap-4 w-full mt-20">
+          <MotionWrapper
+            delay={1}
+            className="flex flex-col md:grid md:grid-cols-3 gap-4 w-full mt-20"
+          >
             {filteredMenus.length === 0 ? (
-              <h1>Menu masih kosong</h1>
+              <h1 className="text-4xl text-white text-center font-bold">
+                Menu Not Found
+              </h1>
             ) : (
-              filteredMenus?.map((item: MenuItemsType) => (
+              filteredMenus.map((item: MenuItemsType) => (
                 <MenuCard
-                  key={item?.id}
-                  id={item?.id}
-                  image={item?.image}
-                  category={item?.category}
-                  name={item?.name}
-                  description={item?.description}
-                  price={item?.price}
+                  key={item.id}
+                  id={item.id}
+                  image={item.image}
+                  category={item.category}
+                  name={item.name}
+                  description={item.description}
+                  price={item.price}
                 />
               ))
             )}
-          </div>
+          </MotionWrapper>
         </div>
       </section>
     </>

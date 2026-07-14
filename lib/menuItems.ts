@@ -4,7 +4,7 @@ export interface MenuItemsType {
   description: string;
   price: string;
   image: string;
-  category?: string;
+  category: string;
 }
 
 export const menuItems: MenuItemsType[] = [
