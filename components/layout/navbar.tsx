@@ -4,11 +4,11 @@ import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { useLenis } from "lenis/react";
-import BuyNowButton from "@/components/ui/buyNowButton";
 import NavLink from "@/components/ui/navLink";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { headerData } from "@/lib/data";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -65,7 +65,9 @@ export default function Navbar() {
                 );
               })}
             </div>
-            <BuyNowButton className="hidden lg:flex bg-orange-600 text-xs font-semibold p-5" />
+            <Button className="hidden lg:flex bg-orange-600 text-xs font-semibold p-5">
+              <Link href="/menu">Order Now!</Link>
+            </Button>
 
             <button
               className="lg:hidden text-white"

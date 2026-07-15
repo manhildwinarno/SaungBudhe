@@ -2,6 +2,7 @@ import { menuItems } from "@/lib/menuItems";
 import Link from "next/link";
 import OtherMenusCard from "./_components/otherMenus";
 import MenuDetailsCard from "./_components/menuDetailsCard";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 export default async function MenuDetails({
   params,
@@ -40,9 +41,13 @@ export default async function MenuDetails({
         price={item.price}
         description={item.description}
       />
-      <h1 className="self-start text-xl font-semibold text-white mb-1">
+      <MotionWrapper
+        as="h1"
+        direction="right"
+        className="self-start text-xl font-semibold text-white mb-1"
+      >
         Try these too!
-      </h1>
+      </MotionWrapper>
       <OtherMenusCard currentId={item.id} />
     </section>
   );

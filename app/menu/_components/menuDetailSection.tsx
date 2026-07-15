@@ -27,7 +27,7 @@ export default function MenuDetailSection() {
   return (
     <>
       <section className="bg-red-900 overflow-hidden">
-        <div className="flex-row justify-center min-h-200 mt-8 p-7 md:p-10">
+        <div className="flex-row justify-center min-h-200 mt-8 p-8 md:p-16">
           <h1 className="text-white text-2xl md:text-4xl font-bold text-center">
             Mau pesan apa hari ini?
           </h1>
@@ -44,8 +44,8 @@ export default function MenuDetailSection() {
             />
           </div>
           <MotionWrapper
-            delay={1}
-            className="flex flex-col md:grid md:grid-cols-3 gap-4 w-full mt-20"
+            delay={0.3}
+            className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 w-full mt-20"
           >
             {filteredMenus.length === 0 ? (
               <h1 className="text-4xl text-white text-center font-bold">
