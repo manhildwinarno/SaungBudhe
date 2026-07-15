@@ -44,6 +44,19 @@ _Goal: Add real functionality that makes the site useful for the business_
 
 ---
 
+### 📡 Phase 2.5 — API Fundamentals
+
+_Goal: Learn how backend APIs work using Next.js Route Handlers before adding a database_
+
+- [ ] **Menu API Route** — Create `app/api/menu/route.ts` to serve menu data as JSON via a `GET` endpoint, then fetch it from your pages using `fetch()`
+- [ ] **Single Menu Item API** — Create `app/api/menu/[slug]/route.ts` to return one menu item by slug (learn dynamic API routes & 404 handling)
+- [ ] **Testimonials API** — Create `GET /api/testimonials` that returns testimonials as JSON instead of importing directly
+- [ ] **Contact Form with API** — Build a working contact form that sends data to `POST /api/contact`, validates input on the server, and returns success/error responses
+- [ ] **Error Handling & Status Codes** — Implement proper HTTP status codes (200, 201, 400, 404, 500) with a consistent JSON error response format
+- [ ] **Loading & Error UI States** — Add loading skeletons and error boundaries for all API-fetched data in the frontend
+
+---
+
 ### ⚡ Phase 3 — Level Up
 
 _Goal: Learn intermediate-to-advanced concepts through real features_
@@ -53,7 +66,7 @@ _Goal: Learn intermediate-to-advanced concepts through real features_
 - [ ] **Page Transitions** — Use Framer Motion's `AnimatePresence` for smooth page transitions between routes
 - [ ] **i18n (Internationalization)** — Add English support using `next-intl` or `next-i18next` — great for learning how real apps handle multiple languages
 - [ ] **Analytics** — Add Google Analytics or Vercel Analytics to track visitors
-- [ ] **Contact Form** — Replace the static contact info with a working form (use Formspree, EmailJS, or a Next.js API route)
+- [ ] **Accessibility Audit** — Learn semantic HTML, ARIA labels, keyboard navigation, and screen reader support — essential for professional web development
 - [ ] **Deploy to Vercel** — Get a real `.vercel.app` domain, learn CI/CD, preview deployments
 
 ---
@@ -67,5 +80,24 @@ _Goal: Transform this into a portfolio piece that impresses recruiters_
 - [ ] **Database** — Store menu items in Supabase or PlanetScale instead of a static file
 - [ ] **Order System** — Basic cart → checkout → WhatsApp confirmation flow
 - [ ] **PWA (Progressive Web App)** — Make the site installable on phones with offline support
+- [ ] **Input Validation & Security** — Sanitize user inputs, prevent XSS, add rate limiting to API routes — learn how to protect your app
 - [ ] **Automated Testing** — Add Playwright or Cypress E2E tests for the critical user flows
 - [ ] **Performance Audit** — Score 90+ on Lighthouse (Performance, Accessibility, Best Practices, SEO)
+
+---
+
+## Fullstack Skills Roadmap
+
+_All the core skills needed to become a professional fullstack developer, mapped to this project:_
+
+| Skill Category | What You'll Learn | Phase |
+|----------------|-------------------|-------|
+| **Frontend Core** | HTML, CSS, JavaScript, React, responsive design | Phase 1–2 |
+| **Component Architecture** | Reusable components, dynamic routes, UI state | Phase 2 |
+| **API Layer** | REST API design, HTTP methods/status codes, `fetch()`, error handling | Phase 2.5 |
+| **CMS & Third-Party APIs** | Headless CMS integration, consuming external APIs | Phase 3 |
+| **Accessibility** | Semantic HTML, ARIA, keyboard navigation, screen readers | Phase 3 |
+| **DevOps & Deployment** | CI/CD, Vercel, environment variables, preview deploys | Phase 3 |
+| **Database** | CRUD operations, schema design (Supabase / MongoDB) | Phase 4 |
+| **Auth & Security** | Authentication, authorization, input validation, XSS prevention | Phase 4 |
+| **Testing** | E2E tests, performance auditing, Lighthouse | Phase 4 |
