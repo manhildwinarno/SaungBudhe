@@ -36,9 +36,9 @@ _Goal: Make the current site production-ready_
 _Goal: Add real functionality that makes the site useful for the business_
 
 - [x] **WhatsApp Order Integration** — Make "Buy Now" and "Order Now" buttons open WhatsApp with a pre-filled message like: `"Halo, saya mau pesan Mie Hotplate Gachoor Sosis 1 porsi"`
-- [ ] **Menu Detail Page** — Create a `/menu/[slug]` dynamic route showing full details, bigger image, and spice level selector
-- [ ] **Spice Level Indicator** — Add a visual chili/gauge component (like your Figma design shows) to each menu item
-- [ ] **Active Navbar Indicator** — Highlight the current section in the navbar as the user scrolls (use `IntersectionObserver` or Lenis scroll events)
+- [x] **Menu Detail Page** — Create a `/menu/[slug]` dynamic route showing full details, bigger image, and spice level selector
+- [x] **Spice Level Indicator** — Add a visual chili/gauge component (like your Figma design shows) to each menu item
+- [x] **Active Navbar Indicator** — Highlight the current section in the navbar as the user scrolls (use `IntersectionObserver` or Lenis scroll events)
 - [ ] **Testimonials/Reviews Section** — Add a section with customer reviews (even if hardcoded at first)
 - [ ] **"Back to Top" Button** — A floating button that appears when scrolling down
 
