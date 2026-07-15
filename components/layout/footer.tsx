@@ -50,7 +50,7 @@ export default function Footer() {
             key={link?.title}
             href={link?.href}
             title={link?.title}
-            classname="text-gray-300"
+            className="text-gray-300"
             onHashClick={handleScroll}
           />
         ))}

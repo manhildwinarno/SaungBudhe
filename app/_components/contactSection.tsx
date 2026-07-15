@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
-import MotionWrapper from "../../components/provider/motionWrapper";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Mie+Hotplate+Gachor+Make+Depok";

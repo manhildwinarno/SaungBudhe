@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "../../components/ui/button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useLenis } from "lenis/react";
-import MotionWrapper from "../../components/provider/motionWrapper";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 export default function HeroSection() {
   const lenis = useLenis();

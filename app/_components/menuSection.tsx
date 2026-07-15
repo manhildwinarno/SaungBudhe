@@ -4,10 +4,10 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../../components/ui/carousel";
+} from "@/components/ui/carousel";
 import MenuCard from "@/components/ui/menuCard";
 import { menuItems, MenuItemsType } from "@/lib/menuItems";
-import MotionWrapper from "../../components/provider/motionWrapper";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 export default function MenuSection() {
   return (
@@ -26,11 +26,12 @@ export default function MenuSection() {
                     className="pl-3 sm:pl-4 basis-[78%] sm:basis-1/2 lg:basis-1/4"
                   >
                     <MenuCard
-                      id={item?.id}
-                      image={item?.image}
-                      name={item?.name}
-                      price={item?.price}
-                      description={item?.description}
+                      id={item.id}
+                      image={item.image}
+                      name={item.name}
+                      price={item.price}
+                      description={item.description}
+                      category={item.category}
                     />
                   </CarouselItem>
                 ))}

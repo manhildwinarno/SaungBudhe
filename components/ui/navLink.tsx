@@ -6,14 +6,14 @@ import React from "react";
 type NavLinkProps = {
   href: string;
   title: string;
-  classname?: string;
+  className?: string;
   onHashClick: (e: React.MouseEvent<HTMLAnchorElement>, target: string) => void;
 };
 
 export default function NavLink({
   href,
   title,
-  classname,
+  className,
   onHashClick,
 }: NavLinkProps) {
   const isHashLink = href.includes("#");
@@ -24,7 +24,7 @@ export default function NavLink({
     return (
       <Link
         href={href}
-        className={classname}
+        className={className}
         onClick={(e) => onHashClick(e, hashTarget)}
       >
         {title}
@@ -33,7 +33,7 @@ export default function NavLink({
   }
 
   return (
-    <Link href={href} className={classname}>
+    <Link href={href} className={className}>
       {title}
     </Link>
   );

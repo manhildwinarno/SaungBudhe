@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { useLenis } from "lenis/react";
-import BuyNowButton from "../ui/buyNowButton";
+import BuyNowButton from "@/components/ui/buyNowButton";
 import NavLink from "@/components/ui/navLink";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -50,15 +50,20 @@ export default function Navbar() {
             />
           </Link>
           <div className="flex justify-center items-center gap-7">
-            <div className="hidden lg:flex gap-12 text-lg font-semibold text-white">
-              {headerData?.map((link) => (
-                <NavLink
-                  key={link?.title}
-                  href={link?.href}
-                  title={link?.title}
-                  onHashClick={handleScroll}
-                />
-              ))}
+            <div className="hidden lg:flex gap-12 text-lg font-semibold">
+              {headerData?.map((link) => {
+                const isActive = pathname === link.href;
+
+                return (
+                  <NavLink
+                    key={link?.title}
+                    href={link?.href}
+                    title={link?.title}
+                    onHashClick={handleScroll}
+                    className={`border-b-2 transition-colors duration-300 ${isActive ? "border-orange-600 text-orange-600" : "border-transparent text-white hover:text-orange- hover:border-orange-600"}`}
+                  />
+                );
+              })}
             </div>
             <BuyNowButton className="hidden lg:flex bg-orange-600 text-xs font-semibold p-5" />
 
@@ -77,7 +82,7 @@ export default function Navbar() {
             <NavLink
               key={link?.title}
               href={link?.href}
-              classname="mx-auto text-xl"
+              className="mx-auto text-xl"
               title={link?.title}
               onHashClick={handleScroll}
             />

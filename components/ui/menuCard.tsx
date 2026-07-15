@@ -3,8 +3,8 @@ import {
   CardDescription,
   CardFooter,
   CardTitle,
-} from "../../components/ui/card";
-import DetailButton from "../../components/ui/detailButton";
+} from "@/components/ui/card";
+import DetailButton from "@/components/ui/detailButton";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { MenuItemsType } from "@/lib/menuItems";

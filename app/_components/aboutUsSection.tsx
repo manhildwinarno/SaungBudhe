@@ -1,4 +1,4 @@
-import MotionWrapper from "../../components/provider/motionWrapper";
+import MotionWrapper from "@/components/provider/motionWrapper";
 
 interface DetailsType {
   title: string;
