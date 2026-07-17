@@ -33,7 +33,7 @@ const contactInfo = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-linear-to-b from-red-900 to-red-950">
+    <section id="contact" className="bg-red-950">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           <MotionWrapper

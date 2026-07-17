@@ -1,5 +1,6 @@
 import Hero from "@/app/_components/heroSection";
 import Menu from "@/app/_components/menuSection";
+import Testimonials from "./_components/testimonialsSection";
 import AboutUs from "@/app/_components/aboutUsSection";
 import Contact from "@/app/_components/contactSection";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <Menu />
+      <Testimonials />
       <AboutUs />
       <Contact />
     </>

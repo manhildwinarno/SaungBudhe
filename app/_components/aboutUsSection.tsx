@@ -1,4 +1,5 @@
 import MotionWrapper from "@/components/provider/motionWrapper";
+import SpiceGauge from "@/components/ui/spiceGauge";
 
 interface DetailsType {
   title: string;
@@ -29,7 +30,7 @@ export default function AboutUsSection() {
   return (
     <section
       id="about"
-      className="bg-linear-to-b from-red-800 to-red-900 py-12 lg:py-0"
+      className="bg-linear-to-b from-red-900 to-red-950 py-12 lg:py-0"
     >
       <MotionWrapper
         direction="none"
@@ -120,6 +121,9 @@ export default function AboutUsSection() {
           ))}
         </div>
       </div>
+      <MotionWrapper className="flex justify-center max-w-6xl mx-auto w-full py-12 md:py-16 lg:py-24">
+        <SpiceGauge />
+      </MotionWrapper>
     </section>
   );
 }
