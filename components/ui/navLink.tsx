@@ -8,6 +8,7 @@ type NavLinkProps = {
   title: string;
   className?: string;
   onHashClick: (e: React.MouseEvent<HTMLAnchorElement>, target: string) => void;
+  onNavigate?: () => void;
 };
 
 export default function NavLink({
@@ -15,6 +16,7 @@ export default function NavLink({
   title,
   className,
   onHashClick,
+  onNavigate,
 }: NavLinkProps) {
   const isHashLink = href.includes("#");
 
@@ -33,7 +35,7 @@ export default function NavLink({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={className} onClick={() => onNavigate?.()}>
       {title}
     </Link>
   );

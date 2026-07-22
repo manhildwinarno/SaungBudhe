@@ -1,35 +1,7 @@
 import Image from "next/image";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { GOOGLE_MAPS_URL, EMBED_URL, contactInfo } from "@/lib/data";
 import MotionWrapper from "@/components/provider/motionWrapper";
-
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Mie+Hotplate+Gachor+Make+Depok";
-
-const EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3!2d106.82!3d-6.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjInNDguMCJTIDEwNsKwNDknMTIuMCJF!5e0!3m2!1sen!2sid!4v1234567890";
-
-const contactInfo = [
-  {
-    icon: MapPin,
-    lines: [
-      "Gg balong, Jl. Kp. Pitara lama, RT.001/RW.06,",
-      "Rangkapan Jaya, Kec. Pancoran Mas, Kota",
-      "Depok, Jawa Barat 16435",
-    ],
-  },
-  {
-    icon: Clock,
-    lines: [
-      "Senin - Kamis, Sabtu - Ahad",
-      "09:00 - 23:00 WIB",
-      "Tutup Hari Jum'at",
-    ],
-  },
-  {
-    icon: Phone,
-    lines: ["+6281319814263"],
-  },
-];
 
 export default function ContactSection() {
   return (

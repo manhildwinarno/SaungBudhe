@@ -1,30 +1,6 @@
 import MotionWrapper from "@/components/provider/motionWrapper";
 import SpiceGauge from "@/components/ui/spiceGauge";
-
-interface DetailsType {
-  title: string;
-  description: string;
-}
-
-const details: DetailsType[] = [
-  {
-    title: "Pangsit Crispy",
-    description: "Kriuk dari pangsit membuat makanan semakin nagih....",
-  },
-  {
-    title: "Ayam Suwir",
-    description:
-      "Membuat mie penuh cita rasa dengan suwir-an ayam yang nagih....",
-  },
-  {
-    title: "Hotplate",
-    description: "Menjaga Mie tetap hangat ketika masuk mulut...",
-  },
-  {
-    title: "Sayuran Segar",
-    description: "Segarnya sayur membuat makanan lebih nikmat di mulut...",
-  },
-];
+import { details } from "@/lib/data";
 
 export default function AboutUsSection() {
   return (
