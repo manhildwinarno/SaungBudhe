@@ -1,4 +1,4 @@
-import { menuItems } from "@/lib/menuItems";
+import { getMenuById } from "@/lib/api";
 import Link from "next/link";
 import OtherMenusCard from "./_components/otherMenus";
 import MenuDetailsCard from "./_components/menuDetailsCard";
@@ -10,7 +10,7 @@ export default async function MenuDetails({
   params: Promise<{ menuId: string }>;
 }) {
   const menuId = (await params).menuId;
-  const item = menuItems.find((item) => item?.id === Number(menuId));
+  const item = await getMenuById(Number(menuId));
 
   if (!item) {
     return (

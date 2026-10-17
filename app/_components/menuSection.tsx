@@ -6,10 +6,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import MenuCard from "@/components/ui/menuCard";
-import { menuItems, MenuItemsType } from "@/lib/menuItems";
 import MotionWrapper from "@/components/provider/motionWrapper";
+import { MenuItemsType } from "@/lib/menuItems";
+import { getAllMenus } from "@/lib/api";
 
-export default function MenuSection() {
+export default async function MenuSection() {
+  const menus = await getAllMenus();
+
   return (
     <section id="menu" className="bg-linear-to-b from-red-900 to-red-800">
       <div className="w-full min-h-146.5 md:min-h-163.75 flex justify-start items-start lg:items-center px-5 py-12 sm:px-12 sm:py-16 lg:p-20">
@@ -20,7 +23,7 @@ export default function MenuSection() {
           <MotionWrapper direction="right" duration={1}>
             <Carousel className="w-full" opts={{ align: "start", loop: true }}>
               <CarouselContent className="-ml-3 sm:-ml-4">
-                {menuItems.slice(0, 5).map((item: MenuItemsType) => (
+                {menus.slice(0, 5).map((item: MenuItemsType) => (
                   <CarouselItem
                     key={item.id}
                     className="pl-3 sm:pl-6 basis-[78%] sm:basis-1/2 lg:basis-1/4"

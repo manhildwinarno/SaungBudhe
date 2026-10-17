@@ -6,7 +6,7 @@ export interface TestimonialsType {
   menuName?: string;
 }
 
-export const Testimonials: TestimonialsType[] = [
+export const testimonials: TestimonialsType[] = [
   {
     id: 1,
     name: "Hilman RD",

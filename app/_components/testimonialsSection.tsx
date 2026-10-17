@@ -1,8 +1,10 @@
 import MotionWrapper from "@/components/provider/motionWrapper";
 import TestimonialCard from "@/components/ui/testimonialCard";
-import { Testimonials } from "@/lib/testimonials";
+import { getTestimonials } from "@/lib/api";
+import { TestimonialsType } from "@/lib/testimonials";
 
-export default function TestimonialsSection() {
+export default async function TestimonialsSection() {
+  const testimonials = await getTestimonials();
   return (
     <section
       id="testimonials"
@@ -13,7 +15,7 @@ export default function TestimonialsSection() {
           What Customers said...
         </h1>
         <div className="flex flex-col gap-8 md:gap-8 md:grid md:grid-cols-2 md:place-items-center lg:flex lg:flex-row">
-          {Testimonials.map((item) => (
+          {testimonials.map((item: TestimonialsType) => (
             <TestimonialCard
               key={item.id}
               id={item.id}

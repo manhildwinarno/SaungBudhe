@@ -1,19 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { menuType } from "@/lib/data";
-import { menuItems, MenuItemsType } from "@/lib/menuItems";
+import { getAllMenus } from "@/lib/api";
+import { MenuItemsType } from "@/lib/menuItems";
 import MenusTabBar from "./menusTabBar";
 import MenuSearchBar from "./menuSearchBar";
 import MenuCard from "@/components/ui/menuCard";
 import MotionWrapper from "@/components/provider/motionWrapper";
 
 export default function MenuDetailSection() {
+  const [menus, setMenus] = useState<MenuItemsType[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getAllMenus().then((data) => {
+      setMenus(data);
+    });
+    setLoading(false);
+  }, []);
+
   const [selectedTab, setSelectedTab] = useState<string>(
     menuType[0]?.title || "",
   );
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const filteredMenus = menuItems.filter(
+  const filteredMenus = menus.filter(
     (item) =>
       (item?.category === selectedTab || selectedTab === "All") &&
       item?.name.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -23,6 +34,9 @@ export default function MenuDetailSection() {
     setSearchQuery(value);
     setSelectedTab("All");
   };
+
+  if (loading)
+    return <p className="text-white text-center">Loading Menus...</p>;
 
   return (
     <>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { GOOGLE_MAPS_URL, EMBED_URL, contactInfo } from "@/lib/data";
 import MotionWrapper from "@/components/provider/motionWrapper";
+import ContactForm from "@/components/ui/contactForm";
 
 export default function ContactSection() {
   return (
@@ -79,6 +80,7 @@ export default function ContactSection() {
             </MotionWrapper>
           </div>
         </div>
+        <ContactForm />
       </div>
     </section>
   );

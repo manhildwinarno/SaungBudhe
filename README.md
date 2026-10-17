@@ -39,8 +39,8 @@ _Goal: Add real functionality that makes the site useful for the business_
 - [x] **Menu Detail Page** — Create a `/menu/[slug]` dynamic route showing full details, bigger image, and spice level selector
 - [x] **Spice Level Indicator** — Add a visual chili/gauge component (like your Figma design shows) to each menu item
 - [x] **Active Navbar Indicator** — Highlight the current section in the navbar as the user scrolls (use `IntersectionObserver` or Lenis scroll events)
-- [ ] **Testimonials/Reviews Section** — Add a section with customer reviews (even if hardcoded at first)
-- [ ] **"Back to Top" Button** — A floating button that appears when scrolling down
+- [x] **Testimonials/Reviews Section** — Add a section with customer reviews (even if hardcoded at first)
+- [x] **"Back to Top" Button** — A floating button that appears when scrolling down
 
 ---
 
@@ -48,11 +48,11 @@ _Goal: Add real functionality that makes the site useful for the business_
 
 _Goal: Learn how backend APIs work using Next.js Route Handlers before adding a database_
 
-- [ ] **Menu API Route** — Create `app/api/menu/route.ts` to serve menu data as JSON via a `GET` endpoint, then fetch it from your pages using `fetch()`
-- [ ] **Single Menu Item API** — Create `app/api/menu/[slug]/route.ts` to return one menu item by slug (learn dynamic API routes & 404 handling)
-- [ ] **Testimonials API** — Create `GET /api/testimonials` that returns testimonials as JSON instead of importing directly
-- [ ] **Contact Form with API** — Build a working contact form that sends data to `POST /api/contact`, validates input on the server, and returns success/error responses
-- [ ] **Error Handling & Status Codes** — Implement proper HTTP status codes (200, 201, 400, 404, 500) with a consistent JSON error response format
+- [x] **Menu API Route** — Create `app/api/menu/route.ts` to serve menu data as JSON via a `GET` endpoint, then fetch it from your pages using `fetch()`
+- [x] **Single Menu Item API** — Create `app/api/menu/[slug]/route.ts` to return one menu item by slug (learn dynamic API routes & 404 handling)
+- [x] **Testimonials API** — Create `GET /api/testimonials` that returns testimonials as JSON instead of importing directly
+- [x] **Contact Form with API** — Build a working contact form that sends data to `POST /api/contact`, validates input on the server, and returns success/error responses
+- [x] **Error Handling & Status Codes** — Implement proper HTTP status codes (200, 201, 400, 404, 500) with a consistent JSON error response format
 - [ ] **Loading & Error UI States** — Add loading skeletons and error boundaries for all API-fetched data in the frontend
 
 ---
