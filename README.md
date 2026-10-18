@@ -53,7 +53,7 @@ _Goal: Learn how backend APIs work using Next.js Route Handlers before adding a 
 - [x] **Testimonials API** — Create `GET /api/testimonials` that returns testimonials as JSON instead of importing directly
 - [x] **Contact Form with API** — Build a working contact form that sends data to `POST /api/contact`, validates input on the server, and returns success/error responses
 - [x] **Error Handling & Status Codes** — Implement proper HTTP status codes (200, 201, 400, 404, 500) with a consistent JSON error response format
-- [ ] **Loading & Error UI States** — Add loading skeletons and error boundaries for all API-fetched data in the frontend
+- [x] **Loading & Error UI States** — Add loading skeletons and error boundaries for all API-fetched data in the frontend
 
 ---
 
