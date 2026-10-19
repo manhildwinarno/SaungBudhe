@@ -61,7 +61,7 @@ _Goal: Learn how backend APIs work using Next.js Route Handlers before adding a 
 
 _Goal: Learn intermediate-to-advanced concepts through real features_
 
-- [ ] **CMS Integration (Sanity or Notion API)** — Let the restaurant owner update menu items, prices, and photos without touching code
+- [x] **CMS Integration (Sanity or Notion API)** — Let the restaurant owner update menu items, prices, and photos without touching code
 - [ ] **Dark/Light Mode Toggle** — Learn CSS variables, `next-themes`, and theming systems
 - [ ] **Page Transitions** — Use Framer Motion's `AnimatePresence` for smooth page transitions between routes
 - [ ] **i18n (Internationalization)** — Add English support using `next-intl` or `next-i18next` — great for learning how real apps handle multiple languages
@@ -90,14 +90,14 @@ _Goal: Transform this into a portfolio piece that impresses recruiters_
 
 _All the core skills needed to become a professional fullstack developer, mapped to this project:_
 
-| Skill Category | What You'll Learn | Phase |
-|----------------|-------------------|-------|
-| **Frontend Core** | HTML, CSS, JavaScript, React, responsive design | Phase 1–2 |
-| **Component Architecture** | Reusable components, dynamic routes, UI state | Phase 2 |
-| **API Layer** | REST API design, HTTP methods/status codes, `fetch()`, error handling | Phase 2.5 |
-| **CMS & Third-Party APIs** | Headless CMS integration, consuming external APIs | Phase 3 |
-| **Accessibility** | Semantic HTML, ARIA, keyboard navigation, screen readers | Phase 3 |
-| **DevOps & Deployment** | CI/CD, Vercel, environment variables, preview deploys | Phase 3 |
-| **Database** | CRUD operations, schema design (Supabase / MongoDB) | Phase 4 |
-| **Auth & Security** | Authentication, authorization, input validation, XSS prevention | Phase 4 |
-| **Testing** | E2E tests, performance auditing, Lighthouse | Phase 4 |
+| Skill Category             | What You'll Learn                                                     | Phase     |
+| -------------------------- | --------------------------------------------------------------------- | --------- |
+| **Frontend Core**          | HTML, CSS, JavaScript, React, responsive design                       | Phase 1–2 |
+| **Component Architecture** | Reusable components, dynamic routes, UI state                         | Phase 2   |
+| **API Layer**              | REST API design, HTTP methods/status codes, `fetch()`, error handling | Phase 2.5 |
+| **CMS & Third-Party APIs** | Headless CMS integration, consuming external APIs                     | Phase 3   |
+| **Accessibility**          | Semantic HTML, ARIA, keyboard navigation, screen readers              | Phase 3   |
+| **DevOps & Deployment**    | CI/CD, Vercel, environment variables, preview deploys                 | Phase 3   |
+| **Database**               | CRUD operations, schema design (Supabase / MongoDB)                   | Phase 4   |
+| **Auth & Security**        | Authentication, authorization, input validation, XSS prevention       | Phase 4   |
+| **Testing**                | E2E tests, performance auditing, Lighthouse                           | Phase 4   |

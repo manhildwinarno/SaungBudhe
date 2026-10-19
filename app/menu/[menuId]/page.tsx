@@ -1,4 +1,4 @@
-import { getMenuById } from "@/lib/api";
+import { getAllMenus, getMenuById } from "@/lib/api";
 import Link from "next/link";
 import OtherMenusCard from "./_components/otherMenus";
 import MenuDetailsCard from "./_components/menuDetailsCard";
@@ -10,7 +10,8 @@ export default async function MenuDetails({
   params: Promise<{ menuId: string }>;
 }) {
   const menuId = (await params).menuId;
-  const item = await getMenuById(Number(menuId));
+  const item = await getMenuById(menuId);
+  const allMenus = await getAllMenus();
 
   if (!item) {
     return (
@@ -48,7 +49,7 @@ export default async function MenuDetails({
       >
         Try these too!
       </MotionWrapper>
-      <OtherMenusCard currentId={item.id} />
+      <OtherMenusCard currentId={item.id} menus={allMenus} />
     </section>
   );
 }

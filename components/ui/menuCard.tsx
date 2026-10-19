@@ -8,6 +8,7 @@ import DetailButton from "@/components/ui/detailButton";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { MenuItemsType } from "@/lib/menuItems";
+import { formatRupiah } from "@/lib/utils";
 
 export default function MenuCard({
   image,
@@ -40,7 +41,7 @@ export default function MenuCard({
             className="bg-red-950 text-xs text-white px-2 py-1 shrink-0"
             variant="secondary"
           >
-            {price}
+            {formatRupiah(price)}
           </Badge>
         </div>
         <CardDescription className="text-orange-100 text-xs sm:text-sm font-medium leading-snug">

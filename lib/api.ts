@@ -8,7 +8,7 @@ export async function getAllMenus() {
   return res.json();
 }
 
-export async function getMenuById(id: number) {
+export async function getMenuById(id: string) {
   const res = await fetch(`${BASE_URL}/api/menu/${id}`);
   if (!res.ok) throw new Error("Failed to fetch specific menus");
   return res.json();

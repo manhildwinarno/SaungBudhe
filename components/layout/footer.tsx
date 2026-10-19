@@ -12,6 +12,8 @@ export default function Footer() {
   const pathname = usePathname();
   const router = useRouter();
 
+  if (pathname.startsWith("/studio")) return null;
+
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
     target: string,

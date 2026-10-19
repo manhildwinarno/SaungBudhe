@@ -6,6 +6,10 @@ import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/studio")) return <>{children}</>;
+
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
       <HashScroller />

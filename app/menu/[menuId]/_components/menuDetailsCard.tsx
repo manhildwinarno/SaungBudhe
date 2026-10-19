@@ -7,6 +7,7 @@ import BuyNowButton from "@/components/ui/buyNowButton";
 import Image from "next/image";
 import SpiceOrder from "@/components/ui/spiceOrder";
 import { useState } from "react";
+import { formatRupiah } from "@/lib/utils";
 
 export default function MenuDetailsCard({
   image,
@@ -44,7 +45,7 @@ export default function MenuDetailsCard({
             />
           </div>
         )}
-        <p className="text-xl font-bold">{price}</p>
+        <p className="text-xl font-bold">{formatRupiah(price)}</p>
         <p className="text-lg font-light">{description}</p>
         <hr className="h-px my-8 bg-slate-200 border-0 dark:bg-slate-700" />
 

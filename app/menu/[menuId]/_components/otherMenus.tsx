@@ -1,9 +1,14 @@
 import MotionWrapper from "@/components/provider/motionWrapper";
 import MenuCard from "@/components/ui/menuCard";
-import { menuItems } from "@/lib/menuItems";
+import { MenuItemsType } from "@/lib/menuItems";
 
-export default function OtherMenusCard({ currentId }: { currentId: number }) {
-  const randomizedMenu = menuItems
+interface OtherMenusProps {
+  currentId: string | number;
+  menus: MenuItemsType[];
+}
+
+export default function OtherMenusCard({ currentId, menus }: OtherMenusProps) {
+  const randomizedMenu = (menus || [])
     .filter((item) => item.id !== currentId)
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);

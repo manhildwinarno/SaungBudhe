@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "./button";
 
 interface Props {
-  id: number;
+  id: string | number;
   className: string;
 }
 
