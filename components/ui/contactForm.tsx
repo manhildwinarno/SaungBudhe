@@ -8,7 +8,7 @@ export default function ContactForm() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -16,13 +16,13 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-orange-600 flex flex-col w-full max-w-xl mx-auto p-6 my-10 mx-auto gap-2 rounded-xl shadow-2xl"
+      className="bg-orange-100 dark:bg-orange-600 flex flex-col w-full max-w-xl mx-auto p-6 my-10 gap-2 rounded-xl shadow-2xl"
     >
       <h2 className="text-2xl font-bold mb-4">
         Ingin lebih dekat dengan kami? Berikan kami saran...
       </h2>
       <input
-        className="p-2 rounded-lg  bg-amber-600 shadow-lg font-medium border focus:outline-none focus:border-2 focus:border-red-950 border-transparent transition-colors duration-300 hover:border-red-950 hover:bg-amber-700"
+        className="p-2 rounded-lg bg-orange-200 dark:bg-amber-600 shadow-lg font-medium border focus:outline-none focus:border-2 focus:border-red-950 border-transparent transition-colors duration-300 hover:border-red-950 hover:bg-orange-300/80 dark:hover:bg-amber-700"
         type="text"
         placeholder="john doe"
         value={name}
@@ -31,7 +31,7 @@ export default function ContactForm() {
       />
       <input
         type="email"
-        className="p-2 rounded-lg bg-amber-600 shadow-lg border-2 border-transparent font-medium focus:outline-none focus:border-2 focus:border-red-950 transition-colors duration-300 hover:border-red-950 hover:bg-amber-700"
+        className="p-2 rounded-lg bg-orange-200 dark:bg-amber-600 shadow-lg border-2 border-transparent font-medium focus:outline-none focus:border-2 focus:border-red-950 transition-colors duration-300 hover:border-red-950 hover:bg-orange-300/80 dark:hover:bg-amber-700"
         placeholder="johndoe@gmail.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -40,7 +40,7 @@ export default function ContactForm() {
 
       <textarea
         name="message"
-        className="p-2 rounded-lg bg-amber-600 shadow-lg border-2 border-transparent font-medium focus:outline-none focus:border-2 focus:border-red-950 transition-colors duration-300 hover:border-red-950 hover:bg-amber-700"
+        className="p-2 rounded-lg bg-orange-200 dark:bg-amber-600 shadow-lg border-2 border-transparent font-medium focus:outline-none focus:border-2 focus:border-red-950 transition-colors duration-300 hover:border-red-950 hover:bg-orange-300/80 dark:hover:bg-amber-700"
         placeholder="apa yang ingin kamu sampaikan..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -49,7 +49,7 @@ export default function ContactForm() {
 
       {status === "loading" ? (
         <Button
-          className="bg-red-950 text-white min-w-[140px] mx-auto rounded-lg p-2 font-semibold mt-6 transition-colors duration-300 hover:bg-red-800"
+          className="bg-red-950 text-white min-w-35 mx-auto rounded-lg p-2 font-semibold mt-6 transition-colors duration-300 hover:bg-red-900"
           type="submit"
           disabled
         >
@@ -57,7 +57,7 @@ export default function ContactForm() {
         </Button>
       ) : (
         <Button
-          className="bg-red-950 text-white min-w-[140px] mx-auto rounded-lg p-2 font-semibold mt-6 transition-colors duration-300 hover:bg-red-800"
+          className="bg-red-950 text-white min-w-35 mx-auto rounded-lg p-2 font-semibold mt-6 transition-colors duration-300 hover:bg-red-900"
           type="submit"
         >
           Kirim Pesan
@@ -69,7 +69,7 @@ export default function ContactForm() {
         </p>
       )}
       {status === "error" && (
-        <p className="text-center font-semibold text-red-900">
+        <p className="text-center font-semibold text-red-950">
           {errorMessage || "Pesan gagal terkirim, coba lagi ya..."}
         </p>
       )}

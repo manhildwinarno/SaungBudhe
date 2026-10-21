@@ -32,7 +32,7 @@ export default function Footer() {
     }
   };
   return (
-    <footer className="w-full bg-red-950 min-h-46.25 flex flex-col lg:flex-row justify-center lg:justify-around items-center text-white p-7 gap-3">
+    <footer className="w-full bg-orange-300/50 dark:bg-red-950 min-h-46.25 flex flex-col lg:flex-row justify-center lg:justify-around items-center text-red-900 dark:text-white p-7 gap-3 font-semibold">
       <div className="hidden lg:flex flex-col justify-center max-w-52">
         <Image
           src="/logo-gachoor.webp"
@@ -42,17 +42,19 @@ export default function Footer() {
         />
         <p>
           Sensasi Mie Hotplate yang{" "}
-          <span className="text-orange-600">Panasnya Pantang Padam!</span>
+          <span className="text-orange-700 dark:text-orange-600">
+            Panasnya Pantang Padam!
+          </span>
         </p>
       </div>
-      <div className="hidden lg:flex flex-col justify-center lg:self-start font-medium gap-3">
+      <div className="hidden lg:flex flex-col justify-center lg:self-start gap-3">
         <p>PAGE</p>
         {headerData?.map((link) => (
           <NavLink
             key={link?.title}
             href={link?.href}
             title={link?.title}
-            className="text-gray-300"
+            className="text-red-900/80 dark:text-gray-300"
             onHashClick={handleScroll}
           />
         ))}
@@ -74,7 +76,7 @@ export default function Footer() {
           <p>09:00-23:00 WIB</p>
           <p>Tutup Hari Jum'at</p>
         </div>
-        <p className="block text-gray-300 text-center lg:text-right">
+        <p className="block text-red-900/80 dark:text-gray-300 text-center lg:text-right">
           &copy; 2026 Mie Gachoor Saung Budhe. Didesain oleh Manhillih
         </p>
       </div>

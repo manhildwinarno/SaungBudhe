@@ -20,7 +20,7 @@ export default function MenuCard({
   return (
     <Card
       key={id}
-      className="overflow-hidden rounded-2xl border-0 p-0 bg-orange-600 flex flex-col h-full"
+      className="overflow-hidden rounded-2xl border-0 p-0 bg-orange-100 dark:bg-orange-600 flex flex-col h-full"
     >
       <div className="relative w-full h-44 sm:h-48 shrink-0">
         <Image
@@ -34,7 +34,7 @@ export default function MenuCard({
 
       <div className="flex flex-col flex-1 px-4 pt-4 pb-3 gap-2">
         <div className="flex items-start justify-between gap-2">
-          <CardTitle className="text-white text-base sm:text-lg font-bold leading-tight">
+          <CardTitle className="text-red-900/90 dark:text-white text-base sm:text-lg font-bold leading-tight">
             {name}
           </CardTitle>
           <Badge
@@ -44,7 +44,7 @@ export default function MenuCard({
             {formatRupiah(price)}
           </Badge>
         </div>
-        <CardDescription className="text-orange-100 text-xs sm:text-sm font-medium leading-snug">
+        <CardDescription className="text-red-900/70 dark:text-orange-100 text-xs sm:text-sm font-medium leading-snug">
           {description}
         </CardDescription>
       </div>

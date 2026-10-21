@@ -31,7 +31,7 @@ export default function SpiceOrder({
               className={`transition-colors duration-300 ${
                 index < displayLevel
                   ? "fill-red-800 text-red-800"
-                  : "text-white/40"
+                  : "text-orange-200 dark:text-white/40"
               }`}
             />
           </button>

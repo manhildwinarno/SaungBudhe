@@ -3,8 +3,9 @@ import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/navbar";
 import SmoothScroll from "@/components/provider/smoothScroll";
-import "./globals.css";
 import Footer from "@/components/layout/footer";
+import ThemeProvider from "@/components/provider/themeProvider";
+import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,13 +29,16 @@ export default function RootLayout({
     <html
       lang="id"
       className={cn("h-full", "antialiased", montserrat.variable, "font-sans")}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <SmoothScroll>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <SmoothScroll>
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -62,7 +62,7 @@ _Goal: Learn how backend APIs work using Next.js Route Handlers before adding a 
 _Goal: Learn intermediate-to-advanced concepts through real features_
 
 - [x] **CMS Integration (Sanity or Notion API)** — Let the restaurant owner update menu items, prices, and photos without touching code
-- [ ] **Dark/Light Mode Toggle** — Learn CSS variables, `next-themes`, and theming systems
+- [x] **Dark/Light Mode Toggle** — Learn CSS variables, `next-themes`, and theming systems
 - [ ] **Page Transitions** — Use Framer Motion's `AnimatePresence` for smooth page transitions between routes
 - [ ] **i18n (Internationalization)** — Add English support using `next-intl` or `next-i18next` — great for learning how real apps handle multiple languages
 - [ ] **Analytics** — Add Google Analytics or Vercel Analytics to track visitors

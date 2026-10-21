@@ -36,13 +36,17 @@ export default function MenuDetailSection() {
   };
 
   if (loading)
-    return <p className="text-white text-center">Loading Menus...</p>;
+    return (
+      <p className="text-red-950 dark:text-white text-center">
+        Loading Menus...
+      </p>
+    );
 
   return (
     <>
-      <section className="bg-red-900 overflow-hidden">
+      <section className="bg-orange-300/50 dark:bg-red-900 overflow-hidden">
         <div className="flex-row justify-center min-h-200 mt-8 p-8 md:p-16">
-          <h1 className="text-white text-2xl md:text-4xl font-bold text-center">
+          <h1 className="text-red-950 dark:text-white text-2xl md:text-4xl font-bold text-center">
             Mau pesan apa hari ini?
           </h1>
           <div className="flex justify-center p-6">
@@ -62,7 +66,7 @@ export default function MenuDetailSection() {
             className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 w-full mt-20"
           >
             {filteredMenus.length === 0 ? (
-              <h1 className="text-4xl text-white text-center font-bold">
+              <h1 className="text-4xl text-red-950 dark:text-white text-center font-bold">
                 Menu Not Found
               </h1>
             ) : (

@@ -6,7 +6,7 @@ export default function AboutUsSection() {
   return (
     <section
       id="about"
-      className="bg-linear-to-b from-red-900 to-red-950 py-12 lg:py-0"
+      className="bg-linear-to-b from-orange-200 to-orange-300/50 dark:from-red-900 dark:to-red-950 py-12 lg:py-0"
     >
       <MotionWrapper
         direction="none"
@@ -24,10 +24,10 @@ export default function AboutUsSection() {
           duration={0.8}
           className="absolute top-[9%] left-[6%] max-w-[18%]"
         >
-          <h3 className="text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
+          <h3 className="text-red-950 dark:text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
             Pangsit Crispy
           </h3>
-          <p className="text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
+          <p className="text-red-900 dark:text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
             Kriuk dari pangsit membuat makanan semakin nagih....
           </p>
         </MotionWrapper>
@@ -36,10 +36,10 @@ export default function AboutUsSection() {
           duration={0.8}
           className="absolute top-[8%] right-[0%] max-w-[20%]"
         >
-          <h3 className="text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
+          <h3 className="text-red-950 dark:text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
             Ayam Suwir
           </h3>
-          <p className="text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
+          <p className="text-red-900 dark:text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
             Membuat mie penuh cita rasa dengan suwir-an ayam yang nagih....
           </p>
         </MotionWrapper>
@@ -48,10 +48,10 @@ export default function AboutUsSection() {
           duration={0.8}
           className="absolute bottom-[12%] left-[0%] max-w-[18%]"
         >
-          <h3 className="text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
+          <h3 className="text-red-950 dark:text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
             Hotplate
           </h3>
-          <p className="text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
+          <p className="text-red-900 dark:text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
             Menjaga Mie tetap hangat ketika masuk mulut...
           </p>
         </MotionWrapper>
@@ -60,10 +60,10 @@ export default function AboutUsSection() {
           duration={0.8}
           className="absolute top-[72%] right-0 max-w-[20%]"
         >
-          <h3 className="text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
+          <h3 className="text-red-950 dark:text-white font-bold text-[clamp(0.75rem,1.8vw,1.5rem)] leading-tight">
             Sayuran Segar
           </h3>
-          <p className="text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
+          <p className="text-red-900 dark:text-white/70 text-[clamp(0.6rem,1.2vw,1rem)] mt-1 leading-snug">
             Segarnya sayur membuat makanan lebih nikmat di mulut...
           </p>
         </MotionWrapper>
@@ -84,12 +84,12 @@ export default function AboutUsSection() {
               key={idx}
               className="flex items-start gap-4"
             >
-              <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-orange-600 mt-2 shrink-0" />
+              <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-900 dark:bg-orange-600 mt-2 shrink-0" />
               <div>
-                <h3 className="text-white font-bold text-xl md:text-2xl leading-tight">
+                <h3 className="text-red-950 dark:text-white font-bold text-xl md:text-2xl leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-white/80 text-sm md:text-base mt-2 leading-relaxed">
+                <p className="text-red-950 dark:text-white/80 text-sm md:text-base mt-2 leading-relaxed">
                   {item.description}
                 </p>
               </div>

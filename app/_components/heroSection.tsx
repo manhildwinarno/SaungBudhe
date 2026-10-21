@@ -19,7 +19,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="bg-linear-to-b from-red-950 to-red-900">
+    <section
+      id="home"
+      className="bg-linear-to-b from-orange-100 to-orange-50 dark:from-red-950 dark:to-red-900"
+    >
       <div className="relative w-full min-h-146.5 md:min-h-182.5 flex justify-start items-start lg:items-center px-7 py-30 lg:p-20">
         <div className="absolute right-0 top-0 h-full w-1/2 md:w-[55%] lg:w-1/2 hidden lg:block opacity-60">
           <Image
@@ -46,11 +49,11 @@ export default function HeroSection() {
           className="flex flex-col justify-center gap-5 z-1"
         >
           <div className="flex flex-col gap-3 md:max-w-2xl lg:max-w-xl">
-            <h1 className="text-[40px] font-bold text-white leading-tight">
+            <h1 className="text-[40px] font-extrabold text-red-950 dark:text-white leading-tight">
               Sensasi Mie Hotplate yang{" "}
               <span className="text-orange-600">Panasnya Pantang Padam!</span>
             </h1>
-            <p className="text-lg lg:text-xl font-medium text-white md:pr-16 lg:pr-20">
+            <p className="text-lg lg:text-xl font-medium text-red-900 dark:text-white md:pr-16 lg:pr-20">
               Nikmati gurihnya kuah tipis rahasia Mie Gachoor Mak'e. Disajikan
               mendidih di atas hotplate, nikmat dan hangat dari suapan pertama
               hingga terakhir.
@@ -59,7 +62,7 @@ export default function HeroSection() {
           <a href="#menu" onClick={handleScroll}>
             <Button
               className={
-                "bg-orange-600 p-5 w-full sm:w-36 md:w-56 lg:w-64 rounded-2xl font-medium lg:text-lg hover:bg-orange-700"
+                "bg-red-950 dark:bg-orange-600 p-5 w-full sm:w-36 md:w-56 lg:w-64 rounded-2xl font-medium lg:text-lg hover:bg-red-900 dark:hover:bg-orange-700 text-white"
               }
             >
               View All Menu

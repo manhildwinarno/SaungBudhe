@@ -16,8 +16,8 @@ export default async function MenuDetails({
   if (!item) {
     return (
       <>
-        <div className="flex justify-center items-center min-h-130 bg-red-900">
-          <h1 className="text-4xl text-white text-center font-bold">
+        <div className="flex justify-center items-center min-h-130 bg-orange-300/50 dark:bg-red-900">
+          <h1 className="text-4xl text-red-950 dark:text-white text-center font-bold">
             Menu Not Found
           </h1>
           <Link href="/menu">See all Menus</Link>
@@ -27,10 +27,10 @@ export default async function MenuDetails({
   }
 
   return (
-    <section className="flex flex-col justify-center items-center bg-red-900 overflow-hidden min-h-200 p-4 sm:p-8 md:p-16 lg:p-24 gap-4 md:gap-8">
+    <section className="flex flex-col justify-center items-center bg-orange-300/50 dark:bg-red-900 overflow-hidden min-h-200 p-4 sm:p-8 md:p-16 lg:p-24 gap-4 md:gap-8">
       <Link
         href="/menu"
-        className="self-start bg-orange-600 hover:bg-orange-950 transition-colors duration-300 text-white text-xs font-semibold rounded-xl p-2"
+        className="self-start bg-red-950 hover:bg-red-900 dark:bg-orange-600 dark:hover:bg-orange-700 transition-colors duration-300 text-white text-xs font-semibold rounded-xl p-3"
       >
         &larr; Back to Menu
       </Link>
@@ -45,7 +45,7 @@ export default async function MenuDetails({
       <MotionWrapper
         as="h1"
         direction="right"
-        className="self-start text-xl font-semibold text-white mb-1"
+        className="self-start text-xl font-extrabold text-red-950 dark:text-white mb-1"
       >
         Try these too!
       </MotionWrapper>

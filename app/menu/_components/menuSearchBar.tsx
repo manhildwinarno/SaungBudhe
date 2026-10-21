@@ -15,7 +15,7 @@ export default function MenuSearchBar({
     <div className="relative max-w-2xl w-full flex justify-center items-center">
       <input
         placeholder="Cari menu..."
-        className="bg-white font-semibold rounded-full border-none outline-0 pl-5 py-2 focus:outline-4 w-full shadow shadow-black/60"
+        className="text-black bg-white font-semibold rounded-full border-none outline-0 pl-5 py-2 focus:outline-4 w-full shadow shadow-black/60"
         value={searchQuery}
         onChange={(e) => handleSearchQuery(e.target.value)}
       />
